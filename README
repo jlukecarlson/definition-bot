@@ -1,3 +1,4 @@
+<<<<<<< HEAD
        _                           _
       / `._                     _.' \
      ( @ : `.                 .' : @ )
@@ -13,14 +14,24 @@
          ".o_.-' ;."|:|".; `-._o."   
            ".__."   \:/   ".__."
                      ^
+=======
+Twitter Definition Bot
+The purpose of this project was to make a twitter account to which anyone could tweet at and it would respond with the definition of the tweeted word
+>>>>>>> Expanded on README
 
 
-KILL IT
-KILL IT WITH FIRE
+How?
 
+First we checked twitter's JSON feed of recent tweets @DefinitionBot (the feed can be seen here) and parsed out new tweets.
 
+From there we extracted the word and put it through Abbreviations.com's API to get a definition. We chose Abbr's API because it provided its definitions in a consise format, which is important considering that Tweets are maxed out at 140 characters.
 
+After that we parsed the XML response to get the definition of the word. From there we concatenated the definition along with the word into a tweet that was directed back at the original user.
 
-Hello, this is Ryan!
-Facundo is a
- noob
+Isues and Bugs we faced included a problem where @DefinitionBot would tweet back two definitions at a user, issues that arose when the tweet was too long, and determining whether tweets from twitter's stream were new or just repeated
+
+Programming Language: Python
+
+APIs Used: Twitter API, Abbreviations.com API
+
+A few Modules used: JSON, simpleJSON, BeautifulSoup, urllib2, tweepy
